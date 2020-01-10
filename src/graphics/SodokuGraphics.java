@@ -57,7 +57,7 @@ public class SodokuGraphics implements Renderable
 			@Override
 			public void func(Button button) {
 				sg.solve();
-				
+				sg.solveable = true;
 			}
 		};
 		
@@ -67,6 +67,7 @@ public class SodokuGraphics implements Renderable
 			public void func(Button button) 
 			{
 				sg.switchSize(4);
+				sg.solveable = true;
 			}
 		};
 		
@@ -76,6 +77,7 @@ public class SodokuGraphics implements Renderable
 			public void func(Button button) 
 			{
 				sg.switchSize(9);
+				sg.solveable = true;
 			}
 		};
 		
@@ -85,6 +87,7 @@ public class SodokuGraphics implements Renderable
 			public void func(Button button) 
 			{
 				sg.switchSize(16);
+				sg.solveable = true;
 			}
 		};
 		
@@ -201,16 +204,10 @@ public class SodokuGraphics implements Renderable
 		}
 		
 		Solver solver = new Solver(grid, size, this);
-		if (!solver.isInputOk())
-		{
-			solveable = false;
-		}
-		else
-		{
-			long timenow = System.currentTimeMillis();
-			solveable = solver.solve(false);
-			System.out.println(System.currentTimeMillis() - timenow);	
-		}		
+		long timenow = System.currentTimeMillis();
+		solveable = solver.solve(false);
+		System.out.println(System.currentTimeMillis() - timenow);	
+			
 	}
 	
 	

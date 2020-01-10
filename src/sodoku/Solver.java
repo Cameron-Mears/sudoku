@@ -21,7 +21,7 @@ public class Solver
 		this.gridOk = isInputOk(grid);
 	}
 	
-	public boolean isInputOk()
+	public boolean isGridOk()
 	{
 		return gridOk;
 	}
