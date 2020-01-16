@@ -139,7 +139,7 @@ public class SodokuGraphics implements Renderable
 		g2.setColor(Color.RED);
 		Font f = new Font("Arial", Font.BOLD, 50);
 		g2.setFont(f);
-		g2.drawString("Sodoku Solver (Very Epic)", boardx, 100);
+		g2.drawString("Sodoku Solver", boardx, 100);
 		if (!solveable)
 		{
 			g2.drawString("Puzzle Not Solveable", boardx, 140);

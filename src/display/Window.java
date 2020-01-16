@@ -23,7 +23,7 @@ public class Window
 		frame.setVisible(true);
 		frame.requestFocus();
 		frame.setResizable(false);
-		frame.setTitle("Epic Soduku Garbage (Not Epic)");
+		frame.setTitle("Soduku Solver");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		instance = this;
 	}
